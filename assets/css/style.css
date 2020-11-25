@@ -620,13 +620,14 @@ section {
 
 #launch {
   position: relative;
-  background: url("../img/launch-bg2.jpeg") center center no-repeat;
+  background: url("../img/launch-bg2.jpeg") center center;
   background-size: cover;
+  background-repeat: no-repeat;
   color: #fff;
   background-attachment: fixed;
 }
 
-#launch:before {
+#launch::before {
   content: "";
   background: rgba(0, 0, 0, 0.562);
   position: absolute;
@@ -635,6 +636,18 @@ section {
   left: 0;
   right: 0;
   
+}
+
+@media(max-width:768px){
+  #launch{
+    background: #200122;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #6f0000, #200122);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #6f0000, #200122); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  }
+  #launch::before{
+    background: rgba(0, 0, 0, 0.418);
+  }
 }
 
 #launch h1 {
