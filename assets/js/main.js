@@ -35,6 +35,15 @@
     }
   });
 
+  // Preloader
+  $(window).on('load', function () {
+    if ($('#preloader').length) {
+      $('#preloader').delay(100).fadeOut('slow', function () {
+        $(this).remove();
+      });
+    }
+  });
+
   // Set the count down timer
   if ($('.countdown').length) {
     var count = $('.countdown').data('count');
