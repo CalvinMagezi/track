@@ -1242,9 +1242,9 @@ transform: translateX(0);
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: url("../img/ugflag.jpg");
+  background: url("../img/ugflag.jpg")  center center;
   background-repeat: no-repeat;
-  background-position: center center;
+  width: 100%;
   color: #fff;
   font-size: 14px;
   position: relative;
