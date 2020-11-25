@@ -1244,8 +1244,8 @@ transform: translateX(0);
 #footer {
   background: url("../img/ugflag.jpg")  center center;
   background-repeat: no-repeat;
-  width: 100%;
   color: #fff;
+  background-attachment: fixed;
   font-size: 14px;
   position: relative;
   background-size: cover;
@@ -1260,6 +1260,18 @@ transform: translateX(0);
   bottom: 0;
   background: rgba(0, 0, 0, 0.85);
   z-index: 1;
+}
+
+@media(max-width: 768px){
+  #footer{
+    background: #f7ff00;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right,  #f7ff00, #b40303, #000);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right,  #f7ff00, #b40303, #000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  }
+  #footer::before{
+    background: rgba(0, 0, 0, 0.432);
+  }
 }
 
 #footer .footer-top {
